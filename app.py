@@ -23,11 +23,9 @@ tfidf_transformer = TfidfTransformer()
 all_features = count_vect.fit_transform(data['reviews'].values.astype('U'))
 count_vect.vocabulary_
 
-#for training
 X_train_counts = count_vect.fit_transform(train["reviews"].values.astype('U'))        
 X_train_tfidf = tfidf_transformer.fit_transform(X_train_counts)
 
-#for testing
 X_new_counts = count_vect.transform(test["reviews"].values.astype('U'))
 X_test_tfidf = tfidf_transformer.transform(X_new_counts)
 

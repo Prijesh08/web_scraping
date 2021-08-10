@@ -5,16 +5,16 @@
   <title>ML API</title>
 
   <style>
-    /* CSS code for button */
+    
     body {
-      /* background-image: url('static/images/bg_img.jpg'); */
+    
       background-color: rgb(227, 11, 255);
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
     }
 
-    /* CSS code for button */
+ 
     .button_css {
     color: #494949 !important;
     text-transform: uppercase;
@@ -38,12 +38,12 @@
 
 <body>
     <div class = "login">
-        <!-- Get input for predict the cancer -->
+     
         <center>
         <form method="POST" action="{{ url_for('predict') }}" >
             <h1 style="color: white;">Enter reviews here...</h1>
             <textarea name="message" rows="7" cols="50"></textarea>
-        <!-- Show button -->
+      
         <div class="button_cont" align="center">
         <button type="submit" class="btn btn-block btn-large"><strong>Predict Review</strong></button>
         <br/>
@@ -51,7 +51,7 @@
         </form>
         </center>
 
-        <!-- Show predicted output using ML model -->
+
         <div>
             <center>
         <h1 style="color: rgb(81, 81, 81);">{{prediction_text}}</h1>

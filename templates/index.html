@@ -9,14 +9,11 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
   <link href="{{ url_for('static',filename='assets/img/favicon.png')}}" rel="icon">
   <link href="{{ url_for('static',filename='assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
   <link rel="stylesheet", type="text/css" href="{{ url_for('static',filename='assets/vendor/aos/aos.css')}}" >
   <link rel="stylesheet", type="text/css"  href="{{ url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}">
   <link rel="stylesheet", type="text/css"  href="{{ url_for('static',filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}">
@@ -25,29 +22,21 @@
   <link rel="stylesheet", type="text/css"  href="{{ url_for('static',filename='assets/vendor/remixicon/remixicon.css')}}">
   <link rel="stylesheet", type="text/css"  href="{{ url_for('static',filename='assets/vendor/swiper/swiper-bundle.min.css')}}">
 
-  <!-- Template Main CSS File -->
   <link rel="stylesheet", type="text/css"  href="{{ url_for('static',filename='assets/css/style.css')}}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Arsha - v4.3.0
-  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center " >
       
       <h1 class="logo me-auto"><a href="{{ url_for('static',filename='index.html')}}"><br>ExcelR</a></h1>
 
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
     <div class="container">
@@ -57,24 +46,21 @@
           
           
           <div class = "login">
-        <!-- Get input for predict the cancer -->
-        <!-- <center> -->
+        
         <form method="POST" action="{{ url_for('predict') }}" >
           <div class="form-outline">
               <textarea class="form-control" name="message" id="textAreaExample" rows="4"></textarea>   
 
             </div>
 
-            <!-- Show button -->
+           
         <div class="button_cont" align="center">
-          <!-- <a href="#predict" class="btn-get-started scrollto">Predict</a> -->
+         
         <button type="submit" class="btn-get-started scrollto"><strong>Predict Review</strong></button>
         <br/>
         </div>
         </form>
-        <!-- </center> -->
-
-        <!-- Show predicted output using ML model -->
+        
         <div>
             <center>
               <br><br><br>
@@ -96,18 +82,16 @@
       </div>
     </div>
 
-  </section><!-- End Hero -->
+  </section>
 
  
-  <!-- Vendor JS Files -->
+ 
   <script src="{{ url_for('static',filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{ url_for('static',filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
   <script src="{{ url_for('static',filename='assets/vendor/aos/aos.js')}}"></script>
   <script src="{{ url_for('static',filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
   <script src="{{ url_for('static',filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
   <script src="{{ url_for('static',filename='assets/vendor/waypoints/noframework.waypoints.js')}}"></script>
-
-  <!-- Template Main JS File -->
   <script src="{{ url_for('static',filename='assets/js/main.js')}}"></script>
 
 </body>
