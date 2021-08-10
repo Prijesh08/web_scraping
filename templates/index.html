@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+    
+  <title>Text Mining</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static',filename='assets/img/favicon.png')}}" rel="icon">
+  <link href="{{ url_for('static',filename='assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet", type="text/css" href="{{ url_for('static',filename='assets/vendor/aos/aos.css')}}" >
+  <link rel="stylesheet", type="text/css"  href="{{ url_for('static',filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}">
+  <link rel="stylesheet", type="text/css"  href="{{ url_for('static',filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}">
+  <link rel="stylesheet", type="text/css"  href="{{ url_for('static',filename='assets/vendor/boxicons/css/boxicons.min.css')}}" >
+  <link rel="stylesheet", type="text/css"  href="{{ url_for('static',filename='assets/vendor/glightbox/css/glightbox.min.css')}}">
+  <link rel="stylesheet", type="text/css"  href="{{ url_for('static',filename='assets/vendor/remixicon/remixicon.css')}}">
+  <link rel="stylesheet", type="text/css"  href="{{ url_for('static',filename='assets/vendor/swiper/swiper-bundle.min.css')}}">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet", type="text/css"  href="{{ url_for('static',filename='assets/css/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Arsha - v4.3.0
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center " >
+      
+      <h1 class="logo me-auto"><a href="{{ url_for('static',filename='index.html')}}"><br>ExcelR</a></h1>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Enter Review Hear...</h1>
+          
+          
+          <div class = "login">
+        <!-- Get input for predict the cancer -->
+        <!-- <center> -->
+        <form method="POST" action="{{ url_for('predict') }}" >
+          <div class="form-outline">
+              <textarea class="form-control" name="message" id="textAreaExample" rows="4"></textarea>   
+
+            </div>
+
+            <!-- Show button -->
+        <div class="button_cont" align="center">
+          <!-- <a href="#predict" class="btn-get-started scrollto">Predict</a> -->
+        <button type="submit" class="btn-get-started scrollto"><strong>Predict Review</strong></button>
+        <br/>
+        </div>
+        </form>
+        <!-- </center> -->
+
+        <!-- Show predicted output using ML model -->
+        <div>
+            <center>
+              <br><br><br>
+        <h1 style="color: rgb(8, 8, 8);">{{prediction_text}}</h1>
+      
+            </center>
+        </div>
+    </div> 
+        
+          
+
+        </div>
+        <div class="d-flex justify-content-center justify-content-lg-start">            
+          <a href="https://www.youtube.com/watch?v=I3cjbB38Z4A" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>What is Text Mining?</span></a>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="{{ url_for('static',filename='assets/img/hero-img.png')}}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+ 
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static',filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/aos/aos.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{ url_for('static',filename='assets/vendor/waypoints/noframework.waypoints.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static',filename='assets/js/main.js')}}"></script>
+
+</body>
+
+</html>
